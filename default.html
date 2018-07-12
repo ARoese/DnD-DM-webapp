@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Effect List</title>
+		<link rel="stylesheet" href="global.css"/>
+		<script src="default.js"></script>
+	</head>
+
+
+	<body onload="refresh()">
+		<div id="navigation">
+			<ul>
+  				<li><a href="#" id="current" style="color: white;">Effect List</a></li>
+  				<li><a href="initiativeList.html">Initiative List</a></li>
+  				<li><a href="dice.html">Dice Roller</a></li>
+			</ul>
+		</div>
+
+		<div class="root">
+			<div id="tutorial">
+				<h1>Help</h1>
+				<h2>Commands</h2>
+				<p>add: add and effect.			Usage: [add FRIENDLY_NAME TIME]</p>
+				<p>remove: remove an effect.	Usage: [remove FRIENDLY_NAME]</p>
+				<p>exit: stops server back-end. Usage: don't</p>
+				<p>You can click any element in the list to remove it</p>
+				<h2>Time Format</h2>
+				<p>Time format when entering commands: days:hours:minutes:seconds
+				Any values that are zero before the first non-zero value can be ommitted. ex: 1:24 instead of 0:0:1:24</p>
+				<p>while negative numbers are sometimes supported, functionality is not guaranteed. Using negative numbers
+				 in the progress command signifies going back in time</p>
+			</div>
+
+
+			<div id="itemList">
+				<h1>Active Effects</h1>
+				<ul id="itemListElement" style="overflow-y: auto;">
+					An error has occoured. please reload the page and try again.
+				</ul>
+				<br/>
+			</div>
+
+
+			<div id="controlPanel">
+				<h1>Control Panel</h1>
+				<form autocomplete="off" action="javascript:submit()">
+					<input id="textBox" type="text" name="command" value="" maxlength="40" placeholder="enter a command...">
+				</form>
+				<button id="submitButton" onClick="submit()">Submit Command</button>
+				<button id="refresh" onclick="refresh()">Refresh</button>
+			</div>
+		</div>
+	</body>
+</html>

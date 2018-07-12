@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Initiative List</title>
+		<link rel="stylesheet" href="global.css"/>
+		<script src="initiativeList.js"></script>
+	</head>
+	<body onload="refresh()">
+		<div id="navigation">
+			<ul>
+  				<li><a href="default.html">Effect List</a></li>
+  				<li><a id="current" href="#" style="color: white">Initiative List</a></li>
+  				<li><a href="dice.html">Dice Roller</a></li>
+			</ul>
+		</div>
+		<div class="root">
+			<div id="itemList">
+				<h1>Initiative Ranking</h1>
+				<ol id="itemListElement" style="overflow-y: auto;">
+					An error has occoured. please reload the page and try again.
+				</ol>
+				<br/>
+			</div>	
+
+			<div id="controlPanel">
+				<h1>Control Panel</h1>
+				<form autocomplete="off" action="javascript:submit()">
+					<input id="textBox" type="text" name="command" value="" maxlength="40" placeholder="enter a command...">
+				</form>
+				<button id="submitButton" onClick="submit()">Submit Command</button>
+				<button id="refresh" onclick="refresh()">Refresh</button>
+			</div>
+		</div>
+	</body>
+</html>
